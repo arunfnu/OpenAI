@@ -15,7 +15,6 @@ const configuration = new Configuration({
 const openAI = new OpenAIApi(configuration);
 
 app.post("/query", async (req, res) => {
-  
   try {
     const { word } = req.body;
     const prompt = `Write a quote around the '${word}'  of 4 lines and give me the result as follows.
